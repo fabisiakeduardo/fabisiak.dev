@@ -1,14 +1,15 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { content } from "@/content/content";
 
 const LangContext = createContext(null);
+const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 export function LangProvider({ children }) {
   const [lang, setLang] = useState("en");
 
-  useEffect(() => {
+  useIsoLayoutEffect(() => {
     const saved = window.localStorage.getItem("fabisiak-lang");
     if (saved === "en" || saved === "pt") setLang(saved);
   }, []);

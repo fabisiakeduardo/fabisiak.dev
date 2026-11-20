@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLang } from "./LangProvider";
 
 export default function PostRow({ post, as: Tag = "h3", showTags = false }) {
@@ -8,7 +9,7 @@ export default function PostRow({ post, as: Tag = "h3", showTags = false }) {
   const ptOnly = lang === "en" && !post.en;
 
   return (
-    <a
+    <Link
       href={`/blog/${post.slug}`}
       className="group grid gap-4 border-t border-line py-9 transition-colors duration-300 md:grid-cols-[260px_1fr] md:gap-10 md:py-11"
     >
@@ -31,6 +32,6 @@ export default function PostRow({ post, as: Tag = "h3", showTags = false }) {
           <span className="text-accent">$</span> {t.blog.readMore.toLowerCase()}
         </p>
       </div>
-    </a>
+    </Link>
   );
 }

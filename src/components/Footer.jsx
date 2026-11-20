@@ -23,7 +23,7 @@ export default function Footer() {
           <h2 className="max-w-3xl text-[clamp(2.5rem,6.5vw,5.5rem)] font-light leading-[1.02] tracking-[-0.03em] text-ink">
             {t.footer.heading}
           </h2>
-          <p className="mt-7 max-w-[52ch] text-lg leading-relaxed text-dim">{t.footer.note}</p>
+          <p className="mt-7 max-w-[52ch] text-lg leading-relaxed text-pretty text-dim">{t.footer.note}</p>
         </Reveal>
 
         <Reveal delay={0.08}>
@@ -59,8 +59,8 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line py-7 font-mono text-[11px] uppercase tracking-[0.14em] text-dim">
-          <p>{t.footer.copyright}</p>
-          <p>Rio Grande do Sul · Brasil</p>
+          <p className="normal-case tracking-normal">{t.footer.copyright}</p>
+          <p>{t.footer.location}</p>
         </div>
       </div>
     </footer>

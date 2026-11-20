@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLang } from "./LangProvider";
 import { ArrowLeft } from "./Icons";
 
@@ -11,13 +12,13 @@ export default function PostBody({ post }) {
   return (
     <div className="px-6 pb-28 pt-32 md:pt-44">
       <article className="mx-auto max-w-3xl">
-        <a
+        <Link
           href="/blog"
           className="inline-flex items-center gap-2 font-mono text-[13px] text-dim transition-colors hover:text-accent"
         >
           <ArrowLeft />
           {t.blog.backToBlog}
-        </a>
+        </Link>
         <p className="tabular mt-12 font-mono text-[11px] uppercase tracking-[0.14em] text-dim">
           {meta.date} · {meta.readingTime}
           {ptOnly ? ` · ${t.blog.ptOnly}` : ""}
@@ -29,7 +30,7 @@ export default function PostBody({ post }) {
           <p className="mt-6 font-mono text-[12px] text-dim">{meta.tags.join(" · ")}</p>
         )}
         <div
-          className="post-content mt-12 border-t border-line pt-10"
+          className="post-content mt-12 max-w-[55ch] border-t border-line pt-10"
           dangerouslySetInnerHTML={{ __html: meta.html }}
         />
       </article>

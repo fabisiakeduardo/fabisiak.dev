@@ -10,7 +10,7 @@ export default function BlogShell({ children }) {
     <LangProvider>
       <Starfield />
       <Nav />
-      <main>{children}</main>
+      <main id="main">{children}</main>
       <Footer />
     </LangProvider>
   );

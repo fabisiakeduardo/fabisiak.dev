@@ -16,7 +16,7 @@ export default function Site({ posts }) {
     <LangProvider>
       <Starfield />
       <Nav />
-      <main>
+      <main id="main">
         <Hero />
         <About />
         <StackSection />

@@ -4,6 +4,7 @@ import { useLang } from "./LangProvider";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { ArrowUpRight } from "./Icons";
+import Motif from "./Motif";
 
 function Row({ project }) {
   return (
@@ -21,14 +22,18 @@ function Row({ project }) {
           <p className="mt-6 font-mono text-[12px] leading-relaxed text-dim">
             {project.stack.map((item, i) => (
               <span key={item}>
-                {i > 0 && <span className="mx-2 text-faint">·</span>}
+                {i > 0 && <span className="text-faint">{" · "}</span>}
                 <span className="text-ink/80">{item}</span>
               </span>
             ))}
           </p>
         )}
       </div>
-      <div className="md:text-right">
+      <div className="flex flex-col gap-8 md:items-end md:text-right">
+        <Motif
+          motif={project.motif}
+          className="h-14 w-14 text-dim transition-colors duration-500 group-hover:text-accent"
+        />
         <a
           href={project.link}
           target="_blank"

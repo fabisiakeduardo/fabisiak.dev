@@ -115,6 +115,35 @@
     @apply mb-4 mt-12 text-2xl font-normal tracking-tight text-ink;
   }
 
+  .post-content h3 {
+    @apply mb-3 mt-10 text-xl font-normal tracking-tight text-ink;
+  }
+
+  .post-content blockquote {
+    @apply mb-6 border-l border-accent/40 pl-5 text-dim;
+  }
+
+  .post-content ol {
+    @apply mb-6 list-decimal space-y-2 pl-6 marker:font-mono marker:text-accent;
+  }
+
+  .post-content img {
+    @apply mb-6 rounded-xl border border-line;
+  }
+
+  .post-content table {
+    @apply mb-6 w-full border-collapse text-base;
+  }
+
+  .post-content th,
+  .post-content td {
+    @apply border-b border-line px-3 py-2 text-left align-top;
+  }
+
+  .post-content th {
+    @apply font-medium text-ink;
+  }
+
   .post-content strong {
     @apply font-medium text-ink;
   }

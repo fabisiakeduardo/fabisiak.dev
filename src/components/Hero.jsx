@@ -62,7 +62,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-1 flex-col px-6 pt-14 md:px-10">
         <div className="flex items-center py-5 font-mono text-[11px] uppercase tracking-[0.14em] text-dim">
           <span>
-            {clock} <span className="text-faint">BRT</span>
+            {clock} <span className="text-dim">BRT</span>
           </span>
         </div>
 
@@ -103,7 +103,7 @@ export default function Hero() {
               <ArrowDown className="transition-transform duration-300 group-hover:translate-y-0.5" />
             </a>
             <a
-              href="mailto:eduardofabisiak@proton.me"
+              href={`mailto:${t.footer.email}`}
               className="font-mono text-[13px] text-dim underline decoration-line-2 underline-offset-[6px] transition-colors duration-300 hover:text-ink hover:decoration-ink"
             >
               {t.hero.ctaSecondary}

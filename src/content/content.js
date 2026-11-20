@@ -7,6 +7,7 @@ export const content = {
       about: "Sobre",
       blog: "Blog",
       contact: "Contato",
+      skip: "pular para o conteúdo",
     },
     hero: {
       command: "$ whoami",
@@ -33,8 +34,18 @@ export const content = {
         "Produtos próprios construídos de ponta a ponta, do modelo de dados ao deploy.",
       items: [
         {
+          name: "Pendência",
+          category: "SaaS · CONTABILIDADE",
+          description:
+            "SaaS para escritórios contábeis controlarem o que falta no mês: pedidos de documentos por cliente e competência, envio pelo link sem conta, aprovação ou devolução item a item, lembretes automáticos e exportação ZIP/CSV. No ar em produção pela Nolvaq.",
+          stack: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Railway"],
+          link: "https://pendencia.site",
+          linkLabel: "pendencia.site",
+          motif: "ledger",
+        },
+        {
           name: "Naia",
-          category: "SAAS · MENSAGERIA",
+          category: "SaaS · MENSAGERIA",
           description:
             "Plataforma multitenant de campanhas em massa no WhatsApp e Telegram, com 98%+ de entregabilidade, ritmo de envio, webhooks, retry e acompanhamento em tempo real. Rodou em produção atendendo clientes reais e hoje é open source.",
           stack: ["Node.js", "TypeScript", "PostgreSQL", "Redis", "BullMQ", "Docker"],
@@ -46,7 +57,7 @@ export const content = {
           name: "Vianova",
           category: "IDENTIDADE · BILLING",
           description:
-            "Hub de conta, identidade e cobrança da empresa que estou fundando: provedor OIDC próprio com OAuth2 e 2FA, RBAC multi-workspace e assinaturas Stripe. Todo produto novo já nasce sobre essa base. Rodou em produção e hoje é open source.",
+            "Hub de conta, identidade e cobrança da Nolvaq, a empresa que estou fundando: provedor OIDC próprio com OAuth2 e 2FA, RBAC multi-workspace e assinaturas Stripe. Todo produto novo já nasce sobre essa base. Rodou em produção e hoje é open source.",
           stack: ["Bun", "TypeScript", "Elysia", "Stripe", "PostgreSQL", "OIDC"],
           link: "https://github.com/fabisiakeduardo/Vianova",
           linkLabel: "github.com/fabisiakeduardo/Vianova",
@@ -71,6 +82,16 @@ export const content = {
           link: "https://github.com/fabisiakeduardo/curriculos",
           linkLabel: "github.com/fabisiakeduardo/curriculos",
           motif: "flux",
+        },
+        {
+          name: "rust-pathtracer",
+          category: "RUST · GRÁFICOS",
+          description:
+            "Path tracer Monte Carlo em Rust com dois backends: CPU paralela com rayon e BVH, e GPU em tempo real sobre compute shaders OpenGL 4.3 com acumulação progressiva. Materiais lambertianos, metálicos e dielétricos, profundidade de campo e câmera livre interativa.",
+          stack: ["Rust", "OpenGL", "GLSL", "Rayon", "BVH"],
+          link: "https://github.com/fabisiakeduardo/rust-pathtracer",
+          linkLabel: "github.com/fabisiakeduardo/rust-pathtracer",
+          motif: "trace",
         },
       ],
       oss: {
@@ -118,6 +139,18 @@ export const content = {
     experience: {
       heading: "Experiência",
       items: [
+        {
+          company: "Nolvaq",
+          role: "Fundador",
+          period: "2026 → presente",
+          bullets: [
+            "Sistemas, automações e integrações sob medida para empresas, do diagnóstico à operação monitorada",
+            "Hub próprio de conta, identidade e billing (Vianova) como base de todos os produtos",
+            "Produtos SaaS em produção sob a marca, como o Pendência para escritórios contábeis",
+          ],
+          tags: ["TypeScript", "Next.js", "Bun", "PostgreSQL", "Stripe", "OIDC"],
+          links: [{ label: "nolvaq.software", url: "https://nolvaq.software" }],
+        },
         {
           company: "Preço Local",
           role: "Software Engineer",
@@ -244,7 +277,13 @@ export const content = {
         { label: "GitHub", url: "https://github.com/fabisiakeduardo" },
         { label: "LinkedIn", url: "https://www.linkedin.com/in/eduardofabisiak" },
       ],
+      location: "Rio Grande do Sul · Brasil",
       copyright: '$ echo "© 2026 Eduardo Fabisiak"',
+    },
+    notFound: {
+      error: "arquivo ou diretório inexistente",
+      hint: "Essa página não existe, ou ainda não foi escrita.",
+      back: "$ cd ~",
     },
   },
   en: {
@@ -255,6 +294,7 @@ export const content = {
       about: "About",
       blog: "Blog",
       contact: "Contact",
+      skip: "skip to content",
     },
     hero: {
       command: "$ whoami",
@@ -280,8 +320,18 @@ export const content = {
       intro: "Own products built end to end, from data modeling to deploy.",
       items: [
         {
+          name: "Pendência",
+          category: "SaaS · ACCOUNTING",
+          description:
+            "SaaS for accounting firms to control what's still missing each month: document requests per client and period, submissions through a link with no account, per-item approval or rejection, automatic reminders and ZIP/CSV export. Live in production under Nolvaq.",
+          stack: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Railway"],
+          link: "https://pendencia.site",
+          linkLabel: "pendencia.site",
+          motif: "ledger",
+        },
+        {
           name: "Naia",
-          category: "SAAS · MESSAGING",
+          category: "SaaS · MESSAGING",
           description:
             "Multitenant bulk campaign platform for WhatsApp and Telegram, with 98%+ delivery rate, send pacing, webhooks, retries and real-time tracking. Ran in production serving real customers and is now open source.",
           stack: ["Node.js", "TypeScript", "PostgreSQL", "Redis", "BullMQ", "Docker"],
@@ -293,7 +343,7 @@ export const content = {
           name: "Vianova",
           category: "IDENTITY · BILLING",
           description:
-            "Account, identity and billing hub for the company I'm founding: own OIDC provider with OAuth2 and 2FA, multi-workspace RBAC and Stripe subscriptions. Every new product starts on top of this base. Ran in production and is now open source.",
+            "Account, identity and billing hub for Nolvaq, the company I'm founding: own OIDC provider with OAuth2 and 2FA, multi-workspace RBAC and Stripe subscriptions. Every new product starts on top of this base. Ran in production and is now open source.",
           stack: ["Bun", "TypeScript", "Elysia", "Stripe", "PostgreSQL", "OIDC"],
           link: "https://github.com/fabisiakeduardo/Vianova",
           linkLabel: "github.com/fabisiakeduardo/Vianova",
@@ -318,6 +368,16 @@ export const content = {
           link: "https://github.com/fabisiakeduardo/curriculos",
           linkLabel: "github.com/fabisiakeduardo/curriculos",
           motif: "flux",
+        },
+        {
+          name: "rust-pathtracer",
+          category: "RUST · GRAPHICS",
+          description:
+            "Monte Carlo path tracer in Rust with two backends: a parallel CPU renderer (rayon + BVH) and a real-time GPU path tracer on OpenGL 4.3 compute shaders with progressive accumulation. Lambertian, metal and dielectric materials, depth of field and an interactive fly camera.",
+          stack: ["Rust", "OpenGL", "GLSL", "Rayon", "BVH"],
+          link: "https://github.com/fabisiakeduardo/rust-pathtracer",
+          linkLabel: "github.com/fabisiakeduardo/rust-pathtracer",
+          motif: "trace",
         },
       ],
       oss: {
@@ -365,6 +425,18 @@ export const content = {
     experience: {
       heading: "Experience",
       items: [
+        {
+          company: "Nolvaq",
+          role: "Founder",
+          period: "2026 → present",
+          bullets: [
+            "Custom systems, automations and integrations for businesses, from diagnosis to monitored operation",
+            "Own account, identity and billing hub (Vianova) as the base for every product",
+            "Live SaaS products under the brand, such as Pendência for accounting firms",
+          ],
+          tags: ["TypeScript", "Next.js", "Bun", "PostgreSQL", "Stripe", "OIDC"],
+          links: [{ label: "nolvaq.software", url: "https://nolvaq.software" }],
+        },
         {
           company: "Preço Local",
           role: "Software Engineer",
@@ -491,7 +563,13 @@ export const content = {
         { label: "GitHub", url: "https://github.com/fabisiakeduardo" },
         { label: "LinkedIn", url: "https://www.linkedin.com/in/eduardofabisiak" },
       ],
+      location: "Rio Grande do Sul · Brazil",
       copyright: '$ echo "© 2026 Eduardo Fabisiak"',
+    },
+    notFound: {
+      error: "no such file or directory",
+      hint: "This page doesn't exist, or hasn't been written yet.",
+      back: "$ cd ~",
     },
   },
 };

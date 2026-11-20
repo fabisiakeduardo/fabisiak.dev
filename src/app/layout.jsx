@@ -22,14 +22,14 @@ export const metadata = {
     template: "%s · fabisiak.dev",
   },
   description:
-    "Software engineer backend e full-stack: APIs, microservices, mensageria, pagamentos e sistemas distribuídos rodando em produção.",
+    "Backend and full-stack software engineer: APIs, microservices, messaging, payments and distributed systems running in production.",
   openGraph: {
     type: "website",
     url: "https://fabisiak.dev",
     siteName: "fabisiak.dev",
     title: "Eduardo Fabisiak · Software Engineer",
     description:
-      "Software engineer backend e full-stack: APIs, microservices, mensageria, pagamentos e sistemas distribuídos rodando em produção.",
+      "Backend and full-stack software engineer: APIs, microservices, messaging, payments and distributed systems running in production.",
     images: [{ url: "https://github.com/fabisiakeduardo.png", width: 460, height: 460 }],
   },
   twitter: {
@@ -37,7 +37,7 @@ export const metadata = {
     creator: "@fabisiakeduardo",
     title: "Eduardo Fabisiak · Software Engineer",
     description:
-      "Software engineer backend e full-stack: APIs, microservices, mensageria, pagamentos e sistemas distribuídos rodando em produção.",
+      "Backend and full-stack software engineer: APIs, microservices, messaging, payments and distributed systems running in production.",
   },
   alternates: { canonical: "https://fabisiak.dev" },
   authors: [{ name: "Eduardo Fabisiak" }],

@@ -24,7 +24,7 @@ export default function Experience() {
                   <p className="mt-2 text-dim">{job.role}</p>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-normal tracking-tight text-ink md:text-3xl">
+                  <h3 className="text-balance text-2xl font-normal tracking-tight text-ink md:text-3xl">
                     {job.company}
                   </h3>
                   <ul className="mt-5 max-w-[68ch] space-y-2.5">
@@ -41,7 +41,7 @@ export default function Experience() {
                     <p className="text-dim">
                       {job.tags.map((tag, j) => (
                         <span key={tag}>
-                          {j > 0 && <span className="mx-2 text-faint">·</span>}
+                          {j > 0 && <span className="text-faint">{" · "}</span>}
                           {tag}
                         </span>
                       ))}

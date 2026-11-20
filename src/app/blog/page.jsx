@@ -4,7 +4,9 @@ import { getAllPosts } from "@/lib/posts";
 
 export const metadata = {
   title: "Blog",
-  description: "Notas sobre o que eu construo, aprendo e quebro no caminho.",
+  description: "What I build, learn and break along the way.",
+  alternates: { canonical: "/blog" },
+  openGraph: { url: "/blog" },
 };
 
 export default function BlogPage() {
