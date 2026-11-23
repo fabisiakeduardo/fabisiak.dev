@@ -2,11 +2,13 @@
   "name": "fabisiak.dev",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node --test tests"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
