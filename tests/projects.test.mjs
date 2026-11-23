@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { content } from "../src/content/content.js";
 
-const featuredSlugs = [
+const expectedSlugs = [
   "pendencia",
   "naia",
   "vianova",
@@ -11,16 +11,33 @@ const featuredSlugs = [
   "rust-pathtracer",
   "fio",
   "aimongus",
+  "anondrop",
+  "bananagit",
+  "singr",
+  "cdn",
+  "url-shortener",
+];
+
+const getProjects = (locale) => [
+  ...content[locale].projects.items,
+  ...content[locale].projects.oss.items,
 ];
 
 for (const locale of ["pt", "en"]) {
-  test(`${locale} has complete case studies for all featured projects`, () => {
-    const projects = content[locale].projects.items;
+  test(`${locale} has complete case studies for all projects`, () => {
+    const projects = getProjects(locale);
     const projectsBySlug = new Map(projects.map((project) => [project.slug, project]));
 
-    for (const slug of featuredSlugs) {
+    assert.deepEqual(
+      projects.map((project) => project.slug),
+      expectedSlugs,
+      `unexpected project slugs in ${locale}`,
+    );
+    assert.equal(projectsBySlug.size, expectedSlugs.length, `duplicate project slugs in ${locale}`);
+
+    for (const slug of expectedSlugs) {
       const project = projectsBySlug.get(slug);
-      assert.ok(project, `missing featured project "${slug}" in ${locale}`);
+      assert.ok(project, `missing project "${slug}" in ${locale}`);
       assert.ok(project.category?.trim(), `${slug} is missing a category in ${locale}`);
 
       for (const field of ["problem", "approach", "outcome"]) {
@@ -45,3 +62,10 @@ for (const locale of ["pt", "en"]) {
     }
   });
 }
+
+test("Portuguese and English expose the same project slugs", () => {
+  assert.deepEqual(
+    getProjects("pt").map((project) => project.slug),
+    getProjects("en").map((project) => project.slug),
+  );
+});

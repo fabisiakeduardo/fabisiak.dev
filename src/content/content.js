@@ -340,36 +340,171 @@ export const content = {
         items: [
           {
             name: "AnonDrop",
+            slug: "anondrop",
+            category: "COMPARTILHAMENTO · COLABORAÇÃO",
             description:
               "Compartilhamento anônimo de arquivos, sem conta, com edição colaborativa de texto e código no navegador, histórico de versões e diff.",
+            caseStudy: {
+              problem:
+                "Compartilhar arquivos sem criar uma conta e colaborar em texto ou código no navegador são necessidades que pedem um fluxo simples de acesso.",
+              approach:
+                "O AnonDrop usa tokens para compartilhar arquivos anonimamente e combina edição colaborativa no navegador com Reverb e Monaco e histórico de versões.",
+              decisions: [
+                {
+                  title: "Compartilhar por token",
+                  description:
+                    "O acesso anônimo é baseado em tokens, sem exigir uma conta para compartilhar arquivos.",
+                },
+                {
+                  title: "Editar texto e código no navegador",
+                  description:
+                    "Reverb e Monaco dão suporte à edição colaborativa diretamente no navegador.",
+                },
+                {
+                  title: "Manter histórico de versões",
+                  description:
+                    "O histórico permite consultar versões anteriores do conteúdo compartilhado.",
+                },
+              ],
+              outcome:
+                "O projeto reúne compartilhamento anônimo, edição colaborativa no navegador e histórico de versões em uma ferramenta.",
+            },
             stack: ["Laravel", "Reverb", "Monaco", "SQLite"],
             link: "https://github.com/fabisiakeduardo/anondrop",
           },
           {
             name: "BananaGit",
+            slug: "bananagit",
+            category: "DESKTOP · GIT",
             description:
               "GUI de Git pra desktop que troca os comandos por ações em português claro: status, branches, stash e diff colorido, sem abrir terminal.",
+            caseStudy: {
+              problem:
+                "Operações comuns de Git pela linha de comando podem ser pouco acessíveis para quem prefere uma interface gráfica.",
+              approach:
+                "O BananaGit é uma aplicação desktop em Kotlin e Compose Desktop que usa JGit e apresenta ações de Git em linguagem simples.",
+              decisions: [
+                {
+                  title: "Construir uma interface desktop",
+                  description:
+                    "Kotlin e Compose Desktop formam a interface gráfica do aplicativo.",
+                },
+                {
+                  title: "Usar JGit para operações de Git",
+                  description:
+                    "JGit fornece a integração com repositórios Git dentro da aplicação.",
+                },
+                {
+                  title: "Apresentar ações em linguagem simples",
+                  description:
+                    "A interface organiza operações como status, branches, stash e diff sem depender de comandos digitados no terminal.",
+                },
+              ],
+              outcome:
+                "O projeto oferece uma interface desktop para operações de Git com ações em linguagem simples.",
+            },
             stack: ["Kotlin", "Compose Desktop", "JGit"],
             link: "https://github.com/fabisiakeduardo/bananagit",
           },
           {
             name: "Singr",
+            slug: "singr",
+            category: "DISCORD · MÚSICA",
             description:
               "Bot de música self-hosted pro Discord, tocando áudio do YouTube e outras fontes nos canais de voz por slash commands.",
+            caseStudy: {
+              problem:
+                "Um servidor Discord pode precisar de reprodução de música nos canais de voz com controle integrado à própria plataforma.",
+              approach:
+                "O Singr é um bot Java auto-hospedado que usa JDA para interagir com o Discord e LavaPlayer para reproduzir áudio.",
+              decisions: [
+                {
+                  title: "Permitir hospedagem própria",
+                  description:
+                    "O bot pode ser executado pelo responsável pelo servidor Discord.",
+                },
+                {
+                  title: "Usar comandos de barra",
+                  description:
+                    "Comandos de barra oferecem a interface de controle dentro do Discord.",
+                },
+                {
+                  title: "Separar integração e reprodução",
+                  description:
+                    "JDA integra o bot ao Discord, enquanto LavaPlayer cuida da reprodução de áudio.",
+                },
+              ],
+              outcome:
+                "O Singr oferece reprodução de música nos canais de voz do Discord controlada por comandos de barra.",
+            },
             stack: ["Java", "JDA", "LavaPlayer"],
             link: "https://github.com/fabisiakeduardo/Singr",
           },
           {
             name: "CDN",
+            slug: "cdn",
+            category: "API · MÍDIA",
             description:
               "Backend de CDN mínimo: recebe, armazena e serve imagens e vídeos por API JSON, com chave de API e limites configuráveis.",
+            caseStudy: {
+              problem:
+                "Aplicações que trabalham com imagens e vídeos precisam de uma interface para enviar e servir esses arquivos com limites definidos.",
+              approach:
+                "O CDN é uma API JSON em Laravel para upload e disponibilização de imagens e vídeos, protegida por chave de API e com limites de arquivo configuráveis.",
+              decisions: [
+                {
+                  title: "Oferecer uma API JSON",
+                  description:
+                    "A API concentra as operações de envio e disponibilização de arquivos de mídia.",
+                },
+                {
+                  title: "Exigir chave de API",
+                  description:
+                    "A autenticação por chave protege o acesso às operações da API.",
+                },
+                {
+                  title: "Configurar limites de arquivo",
+                  description:
+                    "Os limites de arquivo podem ser ajustados para a instalação.",
+                },
+              ],
+              outcome:
+                "O projeto fornece uma API Laravel para receber e servir imagens e vídeos com autenticação por chave e limites configuráveis.",
+            },
             stack: ["Laravel", "PHP"],
             link: "https://github.com/fabisiakeduardo/CDN",
           },
           {
             name: "url-shortener",
+            slug: "url-shortener",
+            category: "UTILITÁRIO · LINKS",
             description:
               "Encurtador de URL direto ao ponto: cola uma URL, gera um link curto.",
+            caseStudy: {
+              problem:
+                "Compartilhar endereços longos pode ser inconveniente quando um link curto é suficiente.",
+              approach:
+                "O url-shortener é uma pequena aplicação Laravel com SQLite que transforma uma URL em um link curto.",
+              decisions: [
+                {
+                  title: "Manter o escopo enxuto",
+                  description:
+                    "A aplicação se concentra no fluxo de encurtar uma URL, sem apresentar recursos além desse objetivo.",
+                },
+                {
+                  title: "Usar Laravel para a aplicação",
+                  description:
+                    "Laravel fornece a estrutura da aplicação web.",
+                },
+                {
+                  title: "Persistir dados em SQLite",
+                  description:
+                    "SQLite é usado como banco de dados da aplicação.",
+                },
+              ],
+              outcome:
+                "O resultado é uma aplicação pequena para gerar links curtos a partir de URLs.",
+            },
             stack: ["Laravel", "SQLite", "Tailwind CSS"],
             link: "https://github.com/fabisiakeduardo/url-shortener",
           },
@@ -866,36 +1001,171 @@ export const content = {
         items: [
           {
             name: "AnonDrop",
+            slug: "anondrop",
+            category: "SHARING · COLLABORATION",
             description:
               "Anonymous file sharing with no account, plus real-time collaborative text and code editing in the browser, version history and diffs.",
+            caseStudy: {
+              problem:
+                "Sharing files without creating an account and collaborating on text or code in the browser call for a simple access flow.",
+              approach:
+                "AnonDrop uses tokens for anonymous file sharing and combines collaborative browser editing with Reverb and Monaco and version history.",
+              decisions: [
+                {
+                  title: "Share through tokens",
+                  description:
+                    "Anonymous access is token-based, with no account required to share files.",
+                },
+                {
+                  title: "Edit text and code in the browser",
+                  description:
+                    "Reverb and Monaco support collaborative editing directly in the browser.",
+                },
+                {
+                  title: "Keep version history",
+                  description:
+                    "The history makes earlier versions of shared content available for review.",
+                },
+              ],
+              outcome:
+                "The project brings anonymous sharing, collaborative browser editing and version history together in one tool.",
+            },
             stack: ["Laravel", "Reverb", "Monaco", "SQLite"],
             link: "https://github.com/fabisiakeduardo/anondrop",
           },
           {
             name: "BananaGit",
+            slug: "bananagit",
+            category: "DESKTOP · GIT",
             description:
               "A desktop Git GUI that swaps commands for plain-language actions: status, branches, stash and colored diff, no terminal needed.",
+            caseStudy: {
+              problem:
+                "Common Git operations through the command line can be less accessible to people who prefer a graphical interface.",
+              approach:
+                "BananaGit is a Kotlin and Compose Desktop application that uses JGit and presents Git actions in plain language.",
+              decisions: [
+                {
+                  title: "Build a desktop interface",
+                  description:
+                    "Kotlin and Compose Desktop provide the application's graphical interface.",
+                },
+                {
+                  title: "Use JGit for Git operations",
+                  description:
+                    "JGit provides integration with Git repositories inside the application.",
+                },
+                {
+                  title: "Present actions in plain language",
+                  description:
+                    "The interface organizes operations such as status, branches, stash and diff without requiring commands to be typed into a terminal.",
+                },
+              ],
+              outcome:
+                "The project provides a desktop interface for Git operations with plain-language actions.",
+            },
             stack: ["Kotlin", "Compose Desktop", "JGit"],
             link: "https://github.com/fabisiakeduardo/bananagit",
           },
           {
             name: "Singr",
+            slug: "singr",
+            category: "DISCORD · MUSIC",
             description:
               "Self-hosted Discord music bot, streaming audio from YouTube and other sources into voice channels via slash commands.",
+            caseStudy: {
+              problem:
+                "A Discord server may need music playback in voice channels with controls integrated into the platform.",
+              approach:
+                "Singr is a self-hosted Java bot that uses JDA to interact with Discord and LavaPlayer to play audio.",
+              decisions: [
+                {
+                  title: "Allow self-hosting",
+                  description:
+                    "The person responsible for a Discord server can run the bot themselves.",
+                },
+                {
+                  title: "Use slash commands",
+                  description:
+                    "Slash commands provide the control interface inside Discord.",
+                },
+                {
+                  title: "Separate integration and playback",
+                  description:
+                    "JDA integrates the bot with Discord, while LavaPlayer handles audio playback.",
+                },
+              ],
+              outcome:
+                "Singr provides music playback in Discord voice channels controlled through slash commands.",
+            },
             stack: ["Java", "JDA", "LavaPlayer"],
             link: "https://github.com/fabisiakeduardo/Singr",
           },
           {
             name: "CDN",
+            slug: "cdn",
+            category: "API · MEDIA",
             description:
               "Minimal CDN backend: receives, stores and serves images and videos over a JSON API, with API key auth and configurable limits.",
+            caseStudy: {
+              problem:
+                "Applications working with images and videos need an interface to upload and serve those files with defined limits.",
+              approach:
+                "CDN is a Laravel JSON API for uploading and serving images and videos, protected by an API key and configurable file limits.",
+              decisions: [
+                {
+                  title: "Provide a JSON API",
+                  description:
+                    "The API brings media upload and serving operations together.",
+                },
+                {
+                  title: "Require an API key",
+                  description:
+                    "Key-based authentication protects access to the API operations.",
+                },
+                {
+                  title: "Configure file limits",
+                  description:
+                    "File limits can be adjusted for an installation.",
+                },
+              ],
+              outcome:
+                "The project provides a Laravel API for receiving and serving images and videos with key-based authentication and configurable limits.",
+            },
             stack: ["Laravel", "PHP"],
             link: "https://github.com/fabisiakeduardo/CDN",
           },
           {
             name: "url-shortener",
+            slug: "url-shortener",
+            category: "UTILITY · LINKS",
             description:
               "Straight-to-the-point URL shortener: paste a URL, get a short link.",
+            caseStudy: {
+              problem:
+                "Sharing long addresses can be inconvenient when a short link is enough.",
+              approach:
+                "url-shortener is a small Laravel application with SQLite that turns a URL into a short link.",
+              decisions: [
+                {
+                  title: "Keep the scope small",
+                  description:
+                    "The application focuses on shortening a URL without presenting features beyond that purpose.",
+                },
+                {
+                  title: "Use Laravel for the application",
+                  description:
+                    "Laravel provides the web application framework.",
+                },
+                {
+                  title: "Persist data in SQLite",
+                  description:
+                    "SQLite is used as the application's database.",
+                },
+              ],
+              outcome:
+                "The result is a small application for generating short links from URLs.",
+            },
             stack: ["Laravel", "SQLite", "Tailwind CSS"],
             link: "https://github.com/fabisiakeduardo/url-shortener",
           },
