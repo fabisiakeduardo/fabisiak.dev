@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { content } from "../src/content/content.js";
+import { getProject, getProjectSlugs } from "../src/lib/projects.js";
 
 const expectedSlugs = [
   "pendencia",
@@ -68,4 +69,33 @@ test("Portuguese and English expose the same project slugs", () => {
     getProjects("pt").map((project) => project.slug),
     getProjects("en").map((project) => project.slug),
   );
+});
+
+test("getProjectSlugs returns the 13 unique project slugs", () => {
+  const slugs = getProjectSlugs();
+
+  assert.deepEqual(slugs, expectedSlugs);
+  assert.equal(new Set(slugs).size, 13);
+});
+
+test("getProject returns localized, merged case-study content", () => {
+  const portugueseProject = getProject("pendencia", "pt");
+  const englishProject = getProject("pendencia", "en");
+
+  assert.equal(portugueseProject.name, "Pendência");
+  assert.equal(portugueseProject.category, content.pt.projects.items[0].category);
+  assert.equal(portugueseProject.link, content.pt.projects.items[0].link);
+  assert.equal(portugueseProject.problem, content.pt.projects.items[0].caseStudy.problem);
+  assert.deepEqual(portugueseProject.decisions, content.pt.projects.items[0].caseStudy.decisions);
+
+  assert.equal(englishProject.name, "Pendência");
+  assert.equal(englishProject.category, content.en.projects.items[0].category);
+  assert.equal(englishProject.link, content.en.projects.items[0].link);
+  assert.equal(englishProject.problem, content.en.projects.items[0].caseStudy.problem);
+  assert.deepEqual(englishProject.decisions, content.en.projects.items[0].caseStudy.decisions);
+  assert.notEqual(portugueseProject.problem, englishProject.problem);
+});
+
+test("getProject returns null for an unknown slug", () => {
+  assert.equal(getProject("not-a-project"), null);
 });
