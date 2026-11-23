@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { getProject } from "@/lib/projects";
 import { useLang } from "./LangProvider";
 
@@ -11,6 +12,9 @@ export default function ProjectCaseStudy({ slug }) {
 
   return (
     <article className="mx-auto max-w-4xl px-6 pb-28 pt-32 md:px-10 md:pt-44">
+      <p className="mb-8 font-mono text-[11px] tracking-[0.08em] text-faint">
+        {t.projects.projectsPath}/{project.slug}
+      </p>
       <header className="border-b border-line pb-10 md:pb-14">
         <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-dim">
           {project.category}
@@ -103,6 +107,12 @@ export default function ProjectCaseStudy({ slug }) {
           <p className="mt-4 max-w-[62ch] text-lg leading-relaxed text-dim">{project.outcome}</p>
         </section>
       </div>
+      <Link
+        href="/#projects"
+        className="mt-10 inline-flex min-h-11 items-center font-mono text-[13px] text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-accent"
+      >
+        {t.projects.backToProjects}
+      </Link>
     </article>
   );
 }

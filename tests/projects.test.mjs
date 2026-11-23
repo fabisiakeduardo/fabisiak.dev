@@ -99,3 +99,21 @@ test("getProject returns localized, merged case-study content", () => {
 test("getProject returns null for an unknown slug", () => {
   assert.equal(getProject("not-a-project"), null);
 });
+
+test("every OSS project has a repository URL label in both locales", () => {
+  for (const locale of ["pt", "en"]) {
+    for (const project of content[locale].projects.oss.items) {
+      assert.ok(
+        project.linkLabel?.trim(),
+        `${project.slug} is missing a repository URL label in ${locale}`,
+      );
+    }
+  }
+});
+
+test("both locales define the case-study path and return labels", () => {
+  assert.equal(content.pt.projects.projectsPath, "~/projects");
+  assert.equal(content.en.projects.projectsPath, "~/projects");
+  assert.equal(content.pt.projects.backToProjects, "Voltar aos projetos");
+  assert.equal(content.en.projects.backToProjects, "Back to projects");
+});

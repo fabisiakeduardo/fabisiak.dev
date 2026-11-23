@@ -33,6 +33,8 @@ export const content = {
       intro:
         "Produtos próprios construídos de ponta a ponta, do modelo de dados ao deploy.",
       caseStudyCta: "Ler estudo de caso",
+      projectsPath: "~/projects",
+      backToProjects: "Voltar aos projetos",
       caseStudyLabels: {
         problem: "Problema",
         approach: "Abordagem",
@@ -371,6 +373,7 @@ export const content = {
             },
             stack: ["Laravel", "Reverb", "Monaco", "SQLite"],
             link: "https://github.com/fabisiakeduardo/anondrop",
+            linkLabel: "github.com/fabisiakeduardo/anondrop",
           },
           {
             name: "BananaGit",
@@ -405,6 +408,7 @@ export const content = {
             },
             stack: ["Kotlin", "Compose Desktop", "JGit"],
             link: "https://github.com/fabisiakeduardo/bananagit",
+            linkLabel: "github.com/fabisiakeduardo/bananagit",
           },
           {
             name: "Singr",
@@ -439,6 +443,7 @@ export const content = {
             },
             stack: ["Java", "JDA", "LavaPlayer"],
             link: "https://github.com/fabisiakeduardo/Singr",
+            linkLabel: "github.com/fabisiakeduardo/Singr",
           },
           {
             name: "CDN",
@@ -473,6 +478,7 @@ export const content = {
             },
             stack: ["Laravel", "PHP"],
             link: "https://github.com/fabisiakeduardo/CDN",
+            linkLabel: "github.com/fabisiakeduardo/CDN",
           },
           {
             name: "url-shortener",
@@ -507,6 +513,7 @@ export const content = {
             },
             stack: ["Laravel", "SQLite", "Tailwind CSS"],
             link: "https://github.com/fabisiakeduardo/url-shortener",
+            linkLabel: "github.com/fabisiakeduardo/url-shortener",
           },
         ],
       },
@@ -694,6 +701,8 @@ export const content = {
       heading: "Projects",
       intro: "Own products built end to end, from data modeling to deploy.",
       caseStudyCta: "Read case study",
+      projectsPath: "~/projects",
+      backToProjects: "Back to projects",
       caseStudyLabels: {
         problem: "Problem",
         approach: "Approach",
@@ -1032,6 +1041,7 @@ export const content = {
             },
             stack: ["Laravel", "Reverb", "Monaco", "SQLite"],
             link: "https://github.com/fabisiakeduardo/anondrop",
+            linkLabel: "github.com/fabisiakeduardo/anondrop",
           },
           {
             name: "BananaGit",
@@ -1066,6 +1076,7 @@ export const content = {
             },
             stack: ["Kotlin", "Compose Desktop", "JGit"],
             link: "https://github.com/fabisiakeduardo/bananagit",
+            linkLabel: "github.com/fabisiakeduardo/bananagit",
           },
           {
             name: "Singr",
@@ -1100,6 +1111,7 @@ export const content = {
             },
             stack: ["Java", "JDA", "LavaPlayer"],
             link: "https://github.com/fabisiakeduardo/Singr",
+            linkLabel: "github.com/fabisiakeduardo/Singr",
           },
           {
             name: "CDN",
@@ -1134,6 +1146,7 @@ export const content = {
             },
             stack: ["Laravel", "PHP"],
             link: "https://github.com/fabisiakeduardo/CDN",
+            linkLabel: "github.com/fabisiakeduardo/CDN",
           },
           {
             name: "url-shortener",
@@ -1168,6 +1181,7 @@ export const content = {
             },
             stack: ["Laravel", "SQLite", "Tailwind CSS"],
             link: "https://github.com/fabisiakeduardo/url-shortener",
+            linkLabel: "github.com/fabisiakeduardo/url-shortener",
           },
         ],
       },
