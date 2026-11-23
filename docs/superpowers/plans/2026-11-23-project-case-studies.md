@@ -40,7 +40,7 @@
 **Interfaces:**
 - Each featured project entry gets `slug` and `caseStudy` with `problem`, `approach`, `decisions` (`{ title, description }[]`), and `outcome`.
 - Add the same fields and slugs to Portuguese and English entries for Pendência, Naia, Vianova, Onda, Currículos, rust-pathtracer, fio, and AImongUS.
-- Add a translated `category` to the OSS entries so every detail page can display a category.
+- Keep Onda's case study within the current portfolio evidence because its repository and live site were unavailable during research.
 - Add translated section labels and the case-study CTA under `projects`.
 
 - [ ] **Step 1: Set up the test command and write content-integrity tests**
@@ -74,6 +74,7 @@ Expected: production build succeeds.
 - The five open-source entries AnonDrop, BananaGit, Singr, CDN, and url-shortener get the same `slug` and `caseStudy` fields as featured projects.
 - The five OSS entries also get concise, translated categories.
 - Together with Task 1, both locales expose the same 13 slugs across `projects.items` and `projects.oss.items`.
+- Keep Onda's case study within the current portfolio evidence because its repository and live site were unavailable during research.
 
 - [ ] **Step 1: Expand the content-integrity tests to all 13 projects**
 
