@@ -45,7 +45,7 @@
 
 - [ ] **Step 1: Set up the test command and write content-integrity tests**
 
-Add `"test": "node --experimental-default-type=module --test tests"` to `package.json`. Add Node built-in tests asserting the eight expected featured slugs are present in both locales and every one has a nonempty category, `problem`, `approach`, `outcome`, and at least one decision with a title and description.
+Set `"type": "module"` and add `"test": "node --test tests"` to `package.json`. Add Node built-in tests asserting the eight expected featured slugs are present in both locales and every one has a nonempty category, `problem`, `approach`, `outcome`, and at least one decision with a title and description.
 
 - [ ] **Step 2: Run the tests and confirm they fail**
 
